@@ -1,3 +1,4 @@
+/*
 package com.min.hadoopexample.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
@@ -11,12 +12,14 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URI;
 
+*/
 /**
  * @program: big-data-example2
  * @description:  原生
  * @author: mcy
  * @create: 2018-11-13 11:14
- **/
+ **//*
+
 public class CRUDExample {
 
     public static final String HDFS_PATH = "hdfs://192.168.0.201:8082";
@@ -39,18 +42,22 @@ public class CRUDExample {
     }
 
 
-    /**
+    */
+/**
      * 创建HDFS目录
-     */
+     *//*
+
     public void mkdir() throws Exception {
         setUp();
         fileSystem.mkdirs(new Path("/hdfsapi/test"));
         tearDown();
     }
 
-    /**
+    */
+/**
      * 创建文件
-     */
+     *//*
+
     public void create() throws Exception {
         setUp();
         FSDataOutputStream output = fileSystem.create(new Path("/hdfsapi/test/a.txt"));
@@ -60,9 +67,11 @@ public class CRUDExample {
         tearDown();
     }
 
-    /**
+    */
+/**
      * 查看HDFS文件的内容
-     */
+     *//*
+
     public void cat() throws Exception {
         setUp();
         FSDataInputStream in = fileSystem.open(new Path("/hdfsapi/test/a.txt"));
@@ -71,9 +80,11 @@ public class CRUDExample {
         tearDown();
     }
 
-    /**
+    */
+/**
      * 重命名
-     */
+     *//*
+
     public void rename() throws Exception {
         setUp();
         Path oldPath = new Path("/hdfsapi/test/a.txt");
@@ -82,9 +93,11 @@ public class CRUDExample {
         tearDown();
     }
 
-    /**
+    */
+/**
      * 上传文件到HDFS
-     */
+     *//*
+
     public void copyFromLocalFileWithProgress() throws Exception {
         setUp();
         InputStream in = new BufferedInputStream(
@@ -99,9 +112,11 @@ public class CRUDExample {
         tearDown();
     }
 
-    /**
+    */
+/**
      * 下载HDFS文件
-     */
+     *//*
+
     public void copyToLocalFile() throws Exception {
         setUp();
         Path localPath = new Path("/min/222.pcap");
@@ -111,9 +126,11 @@ public class CRUDExample {
     }
 
 
-    /**
+    */
+/**
      * 查看某个目录下的所有文件
-     */
+     *//*
+
     public void listFiles() throws Exception {
         FileStatus[] fileStatuses = fileSystem.listStatus(new Path("/"));
 
@@ -127,10 +144,12 @@ public class CRUDExample {
         }
     }
 
-    /**
+    */
+/**
      * 删除
      * boolean : 是否递归删除
-     */
+     *//*
+
     public void delete() throws Exception{
         fileSystem.delete(new Path("/"), true);
     }
@@ -141,3 +160,4 @@ public class CRUDExample {
 
 
 
+*/
