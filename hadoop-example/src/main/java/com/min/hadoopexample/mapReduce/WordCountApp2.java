@@ -19,8 +19,6 @@ import java.io.*;
 
 public class WordCountApp2 {
 
-
-
     public static class MyMapper extends Mapper<LongWritable, BytesWritable, LongWritable, Text>{
 
         @Override
@@ -40,11 +38,8 @@ public class WordCountApp2 {
             for(Text t:values){
                 byte[] bytes = t.getBytes();
                 Integer length = bytes.length;
-
                 context.write(new LongWritable(0),t);
-
             }
-
         }
     }
 
@@ -82,7 +77,6 @@ public class WordCountApp2 {
         System.exit(job.waitForCompletion(true) ? 0 : 1);
 
     }
-
 
 
     public static void main(String[] args) {//"/alldata/128/128.pcap"  //
